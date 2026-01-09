@@ -1,0 +1,1023 @@
+:root{
+   --wheat:#f5deb3;
+}
+
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+
+main{
+    max-width: 1200px;
+    margin: auto;
+}
+
+body{
+    font-family:"Poppins";
+    line-height: 1.6;
+    color:#000;
+   
+    
+
+     /* BACKGROUND GLOBAL */
+    background-image: url("Folder/images/homepage\ \(2\).jpg"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+html{
+    font-size: 50%; /* lebih stabil (10px) */
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+  
+}
+
+section{
+    padding:2rem 9%;
+}
+
+
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(245, 239, 230, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 80px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #2f2f2f;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #592720;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+.home-hero {
+  min-height: 100vh;
+  padding: 180px 80px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background-color: #f5efe6;
+}
+
+.home-text {
+  max-width: 520px;
+  margin-bottom: 100px;
+}
+
+.home-text h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.home-text p {
+  font-size: 17px;
+  opacity: 0.85;
+  margin-bottom: 35px;
+}
+
+.home-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.home-gif img {
+  width: 420px;
+  max-width: 100%;
+  animation: float 4s ;
+  margin-bottom: 120px;
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* HOME PAGE */
+
+.home{
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .page-wrapper{
+    padding-top: 70px;
+  }
+
+.home-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* text box */
+.home-text{
+  text-align: center;
+  max-width:none;
+}
+
+.home-text h3{
+  font-size: 50px;
+  margin-bottom:0;
+  color:#704241;
+  text-align:center;
+}
+
+.menu{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3rem;
+}
+
+
+:root{
+  --header-height: 60px;
+}
+
+/* SEMUA PAGE KECUALI HOME */
+body:not(.home-page){
+  padding-top: calc(var(--header-height) + 20px);
+}
+
+.page-aboutme .page-wrapper,
+    .page-about_sha.page-wrapper,
+    .page-explore.page-wrapper,
+    .page-workdump-wrapper,
+    .page-Gallery.page-wrapper,
+    .page-contactme.page-wrapper
+    {
+    padding-top: 100px;
+   }
+  
+/* MEET SHA SECTION */
+.about-section {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+  float: left;
+  width: 330px;
+  border: 3px solid #000;
+  border-radius: 6px;
+  margin: 90px 40px 30px 250px; /* atas | kanan | bawah | kiri */
+}
+
+/*  TITLE */
+.me-time-title {
+  text-align: center;
+  font-size: 34px;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  margin-right: 550px;
+}
+
+/* INFO LIST */
+.info-list {
+  max-width: 650px;
+  margin: 20px auto 30px;
+  padding: 0;
+  list-style-position: inside;
+  font-family: "Poppins";
+  color: #3c1414;
+  text-align: left; /* biar readable */
+}
+
+.info-list li {
+  font-size: 16px;
+  margin-bottom: 14px;         
+  padding-left: 22px;
+  position: relative;
+}
+
+/*  ABOUT TEXT BOX */
+.about-text {
+  max-width: 1050px;
+  margin: 30px auto 60px;
+  padding: 40px 50px;
+  font-family: "Poppins";
+  font-size: 17px;
+  line-height: 1.9;
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.about-text p {
+  margin-bottom: 18px;
+}
+
+/*Explore Section */
+.explore-section {
+  padding: 90px 20px 80px;
+  text-align: center;
+}
+
+/* Title */
+.explore-title {
+  text-align: center;
+  font-size: 34px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-family:"Poppins";
+  letter-spacing: 0.8px;
+}
+
+/*Content Wrapper */
+.explore-content {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.6);
+  padding: 40px;
+  border-radius: 25px;
+}
+
+/* Book Pick */
+.book-pick {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+/* Book Image */
+.explore-img {
+  width: 260px;
+  border-radius: 15px;
+  margin: 20px auto 30px;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Paragraph */
+.explore-text {
+ font-size: 17px;
+ text-align: justify;
+}
+
+/* SOUNDTRACK */
+.soundtrack-section {
+   padding: 80px 20px;
+}
+
+.soundtrack-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+/* GROUP IMAGE */
+.group-wrapper {
+   text-align: center;
+  margin-bottom: 50px;
+}
+
+/* buang border gambar group */
+.group-wrapper img {
+  border-radius: 12px;
+  border: 3px solid #592720;
+}
+
+.hint-text {
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* MAIN LAYOUT  */
+.soundtrack-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 50px;
+  align-items: start
+}
+
+
+/* LEFT SIDE (ALBUM + AUDIO) */
+.left-side {
+  text-align: center;
+}
+
+.vinyl-img {
+  width: 380px;
+  margin-bottom: 15px;
+}
+
+.audio-player {
+  width: 360px;
+}
+
+.text-side {
+  background: rgba(255,255,255,0.6);
+  padding: 35px;
+  border-radius: 25px;
+}
+
+.text-side p {
+  font-size: 17px;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* TABLE RESET (BUANG GARISAN KOTAK) */
+.album-table {
+  border-collapse: collapse;
+}
+
+.album-table,
+.album-table tr,
+.album-table td {
+  border: none;
+  padding: 0;
+}
+
+/* ALBUM IMAGE */
+.album-table img {
+  width: 440px;
+  display: block;
+  margin-bottom: 12px;
+  border: none; /* 🔥 buang kotak */
+}
+
+/* AUDIO */
+.audio-player {
+  width: 440px; /* sama lebar dengan album */
+  display: block;
+  margin: 0;
+}
+
+/* TEXT SIDE  */
+.text-side {
+  max-width: 600px;
+}
+
+.text-side h3 {
+  font-family: "Poppins";
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+
+/* DRAMA SECTION */
+.drama-section {
+  padding: 80px 20px; 
+}
+
+/*  TITLE */
+.section-title{
+  font-family: 'Poppin';
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.drama-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* POSTER IMAGE  */
+.drama-section img[src*="love-in-the-clouds"] {
+  width: 500px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/*  TABLE HEADER  */
+.drama-section th {
+  text-align: justify;
+  font-weight: 500;
+}
+
+/*  TABLE TEXT  */
+.drama-section td,
+.drama-section th,
+.drama-section p,
+.drama-section h3 {
+  font-family: "Poppins"; 
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: normal;
+}
+
+.drama-table p {
+  font-size: 15px;
+  text-align: justify;
+}
+
+.drama-table img {
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background-color: #f5efe6;
+  color: #2f2f2f;
+  line-height: 1.8;
+}
+
+/* ===============================
+   PAGE TITLE
+================================ */
+.page-title {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 90px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.page-intro {
+  text-align: center;
+  font-size: 20px;
+  opacity: 0.8;
+  margin-bottom: 90px;
+}
+
+/* ===============================
+   EXPERIENCE WRAPPER
+================================ */
+.experience-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ===============================
+   EXPERIENCE SECTION
+================================ */
+.experience-section {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  background: rgba(255, 255, 255, 0.55);
+  padding: 40px;
+  border-radius: 22px;
+}
+
+/* REVERSE LAYOUT (MARATHON) */
+.experience-section.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===============================
+   IMAGE (UNIFORM & CENTERED)
+================================ */
+.experience-img {
+  width: 520px;              /* 🔼 besarkan sikit (asal 480) */
+  height: 360px;             /* ⭐ paksa semua image sama tinggi */
+  object-fit: cover;         /* crop cantik tanpa herot */
+  border-radius: 18px;
+  flex-shrink: 0;
+  display: block;
+  margin: 0 auto;            /* ⭐ CENTER image */
+  box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.experience-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+/* ===============================
+   TEXT CONTENT
+================================ */
+.experience-text {
+  flex: 1;
+ 
+}
+
+.experience-text h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.experience-text h2::after {
+  content: "";
+  width: 45px;
+  height: 3px;
+  background: #592720;
+  display: block;
+  margin-top: 8px;
+}
+
+.experience-text p {
+  font-size: 17px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* ===============================
+   DIVIDER
+================================ */
+.experience-divider {
+  width: 70%;
+  margin: 100px auto;
+  border: none;
+  border-top: 1px dashed #592720;
+}
+
+
+/* ==============================
+   GLOBAL RESET
+============================== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: "Poppins";
+  background-color: #f5efe6;
+  color: #2f2f2f;
+  line-height: 1.8;
+  padding: 0;
+  overflow-x: hidden; 
+}
+
+/* ==============================
+   GALLERY SECTION
+============================== */
+section.gallery{
+  padding: 120px 40px 80px;
+  position: relative;
+}
+
+/* ==============================
+   TITLE & SUBTITLE
+============================== */
+.gallery-title{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 10px;
+  margin-right: 15px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.gallery-subtitle{
+  text-align: center;
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 60px;
+}
+
+
+/* ==============================
+   IMAGE GRID
+============================== */
+section.gallery > .gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 260px));
+  gap: 24px;
+  justify-content: center;
+}
+
+/* ==============================
+   IMAGE CARD
+============================== */
+.dropdown-img{
+  position: relative;
+}
+
+.thumb{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumb:hover{
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+}
+
+/* ==============================
+   POPUP TOGGLE
+============================== */
+.popup-toggle{
+  display: none;
+}
+
+/* ==============================
+   POPUP OVERLAY
+============================== */
+.dropdown-content{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 999;
+}
+
+.popup-toggle:checked ~ .dropdown-content{
+  display: block;
+}
+
+.overlay-bg{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+/* ==============================
+   POPUP BOX
+============================== */
+.popup-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 22px;
+  width: 90%;
+  max-width: 320px;
+  animation: popup 0.3s ease forwards;
+}
+
+@keyframes popup{
+  to{
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.popup-box img{
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.popup-box p{
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+/* ==============================
+   CLOSE BUTTON
+============================== */
+.close-btn{
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  background: #ffb6c1;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ==============================
+   VIDEO SECTION – TRUE CENTER
+============================== */
+.gallery-video{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);   /* CENTER MUTLAK */
+
+  width: 100vw;                  /* penuh skrin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  margin: 80px 0 40px;
+}
+
+/* Video */
+.gallery-video video{
+  width: 360px;                  /* medium besar */
+  max-width: 90%;
+  border-radius: 22px;
+  background: #000;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover */
+.gallery-video video:hover{
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.35);
+}
+
+/* ===== CONTACT WRAPPER (TURUNKAN SEMUA CONTENT) ===== */
+.contact-wrapper {
+  padding-top: 120px;  
+}
+
+/* ===== CONTACT TITLE ===== */
+.contact-title {
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 40px;
+  margin-bottom: 10px;
+  letter-spacing: 4px;
+}
+
+.contact-desc {
+  text-align: center;
+  font-size: 25px;
+  opacity: 0.8;
+  margin-bottom: 60px;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 120px;
+  margin-top: 40px;     /* ⭐ tambahan jarak */
+}
+
+/* ===== CONTACT CARD ===== */
+.contact-card {
+  width: 230px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #2f2f2f;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card img {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ===== HOVER EFFECT ===== */
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.25);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 28px;
+  }
+
+  .contact-section {
+    gap: 25px;
+  }
+}
+
+
+/* ===============================
+   EXPLORE SECTION
+================================ */
+.explore-section {
+  padding: 90px 20px 60px;
+  text-align: center;
+}
+
+.explore-title {
+  text-align: center;
+  font-size: 34px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-family:"Poppins";   /* ❌ TUKAR SINI */
+  letter-spacing: 0.8px;
+}
+
+.explore-content {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.6);
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.book-pick {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.explore-img {
+  width: 260px;
+  border-radius: 15px;
+  margin: 20px auto 30px;
+  display: block;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.explore-text {
+  font-size: 17px;
+  text-align: justify;
+}
+
+/* ===============================
+   SOUNDTRACK SECTION
+================================ */
+.soundtrack-section {
+  padding: 80px 20px;
+}
+
+.soundtrack-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.group-wrapper {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.group-wrapper img {
+  max-width: 90%;
+  border-radius: 12px;
+  border: 3px solid #592720;
+}
+
+.hint-text {
+  font-size: 14px;
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* ===============================
+   SOUNDTRACK CONTENT
+================================ */
+.soundtrack-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.left-side {
+  text-align: center;
+}
+
+.vinyl-img {
+  width: 380px;
+  margin-bottom: 15px;
+}
+
+.audio-player {
+  width: 360px;
+}
+
+.text-side {
+  background: rgba(255,255,255,0.6);
+  padding: 35px;
+  border-radius: 25px;
+}
+
+.text-side p {
+  font-size: 17px;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* ===============================
+   DRAMA SECTION
+================================ */
+.drama-section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+.drama-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.drama-poster {
+  width: 500px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===============================
+   DRAMA TABLE (KEKAL FORMAL)
+================================ */
+.drama-table {
+  width: 40%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.85);
+}
+
+.drama-table th,
+.drama-table td {
+  border: 1px solid #000;
+  padding: 15px;
+  vertical-align: top;
+}
+
+.drama-table th {
+  background-color: #bc8f8f;
+}
+
+.drama-table p {
+  font-size: 15px;
+  text-align: justify;
+}
+
+.drama-table img {
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
